@@ -1,0 +1,17 @@
+{
+  "name": "socketio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/socket.io": "^2.1.11",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "dev": "nodemon slack.js"
+  }
+}

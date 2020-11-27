@@ -1,0 +1,75 @@
+<!-- bootstrap -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+  integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+  crossorigin="anonymous"
+/>
+<!-- end bootstrap -->
+<!-- font awesome -->
+
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+  integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+  crossorigin="anonymous"
+/>
+<!-- end font awesome -->
+<link rel="stylesheet" type="text/css" href="./style.css" />
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-1 namespaces">
+      <!-- JS will update this dynamically!! -->
+    </div>
+    <div class="col-2 rooms">
+      <h3>Rooms</h3>
+      <ul class="room-list">
+        <!-- JS will update this dynamically!! -->
+      </ul>
+    </div>
+    <div class="col-9 chat-panel">
+      <div class="room-header d-flex justify-content-between">
+        <div>
+          <span class="curr-room-text"></span>
+          <span class="curr-room-num-users"
+            >Users <i class="fas fa-user"></i>
+          </span>
+        </div>
+        <div class="search mr-5">
+          <div class="input-group">
+            <input
+              type="text"
+              id="search-box"
+              placeholder="Search"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="message-form">
+        <form id="user-input">
+          <div class="row">
+            <div class="col-9">
+              <input
+                id="user-message"
+                type="text"
+                placeholder="Enter your message"
+              />
+            </div>
+            <div class="col-3">
+              <button class="btn btn-success" type="submit">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <ul id="messages" class="col-12"></ul>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/scripts.js"></script>
+<script src="/joinRoom.js"></script>
+<script src="/joinNs.js"></script>
+<!-- <script src="/joinRoom.js"></script> -->
